@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <div id="app">
+        <hello-word></hello-word>
+        <vue-directive></vue-directive>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="./components/HellorWord.js"></script>
+    <script src="./components/DirectiveHtml.js"></script>
+    <script src="./components/DirectiveShow.js"></script>
+    <script src="./components/DirectiveIf.js"></script>
+    <script src="./components/DirectiveFor.js"></script>
+    <script src="./components/DirectiveOn.js"></script>
+    <script src="./components/DirectiveModel.js"></script>
+    <script src="./components/VueDirective.js"></script>
+    <script>
+        const vm = new Vue({
+            el: '#app',
+        })
+    </script>
+</body>
+</html>
