@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        [v-cloak]{
+            display: none;
+        }
+    </style>
 </head>
 <body> 
     <div id="app">
+        <!--Sirve para ocultar las directivas v-cloak del estilo-->
+        <p v-cloak> {{title}} </p>
         <hello-word></hello-word>
         <vue-directive></vue-directive>
     </div>
@@ -22,10 +29,17 @@
     <script src="./components/DirectiveModel.js"></script>
     <script src="./components/SlotComponents/buttonComp.js"></script>
     <script src="./components/DirectiveSlot.js"></script>
+    <script src="./components/DirectivePre.js"></script>
+    <script src="./components/DirectiveOnce.js"></script>
     <script src="./components/VueDirective.js"></script>
     <script>
         const vm = new Vue({
             el: '#app',
+            data() {
+                return {
+                    title: 'DirectivasVuejs v-clcok'
+                }
+            },
         })
     </script>
 </body>
