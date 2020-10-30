@@ -4,6 +4,7 @@ let MovieComp = {
             <img :src="cover"></img>
             <h2 v-text="title"></h2>
             <p v-text="synopsis"></p>
+            <button @click="$emit('update:like', !like)" v-text=" like ? 'Favorita':'Agregar a Favorita'"></button>
             <hr>
         </div>
     `,
@@ -23,12 +24,23 @@ let MovieComp = {
         cover   :{
             type     : String,
             required : true 
+        },
+        like : {
+            type: Boolean,
+            required: true,
+            default () {
+                return false
+            }
         }
-
-
-    }
+    },
+    methods: {
+        toggleLike (){
+            // this.like = !this.like
+            let data = {
+                id   : this.id,
+                like : !this.like
+            }
+            this.$emit('toggleLike', data)
+        }
+    },
 }
-'id',
-        'title',
-        'synopsis',
-        'cover'
