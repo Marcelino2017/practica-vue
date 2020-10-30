@@ -1,15 +1,16 @@
 Vue.component('vue-directive',{
     template: `
         <div>
-        <h1 v-text="title" ></h1>
-           <p v-text="text"></p>
-           <a :href="link.href" :title="link.title" v-text="link.text"></a>
-           <directive-html></directive-html>
-           <directive-show></directive-show>
-           <directive-if/>
-           <directive-for/>
-           <DirectiveOn/>         
-           <DirectiveModel/>
+            <h1 v-text="title" ></h1>
+            <p v-text="text"></p>
+            <a :href="link.href" :title="link.title" v-text="link.text"></a>
+            <directive-html></directive-html>
+            <directive-show></directive-show>
+            <directive-if/>
+            <directive-for/>
+            <DirectiveOn/>         
+            <DirectiveModel/>
+            <DirectiveSlot/>
         </div>
     `,
     data (){
@@ -29,6 +30,7 @@ Vue.component('vue-directive',{
         DirectiveIf,
         DirectiveFor,
         DirectiveOn,
-        DirectiveModel
+        DirectiveModel,
+        DirectiveSlot
     }
 });
